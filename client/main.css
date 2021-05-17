@@ -1,0 +1,7 @@
+body {
+  background-color: #f8f9fe;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}

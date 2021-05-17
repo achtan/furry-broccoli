@@ -1,0 +1,45 @@
+{
+  "name": "app",
+  "private": true,
+  "scripts": {
+    "start": "MONGO_URL=mongodb://127.0.0.1:27017/dobryvodic METEOR_PACKAGE_DIRS=/Users/david/sites/dobryvodic/packages meteor run --port 3004",
+    "test": "MONGO_URL=mongodb://127.0.0.1:27017/dobryvodic METEOR_PACKAGE_DIRS=/Users/david/sites/dobryvodic/packages meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "MONGO_URL=mongodb://127.0.0.1:27017/dobryvodic METEOR_PACKAGE_DIRS=/Users/david/sites/dobryvodic/packages TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "MONGO_URL=mongodb://127.0.0.1:27017/dobryvodic METEOR_PACKAGE_DIRS=/Users/david/sites/dobryvodic/packages meteor --production --extra-packages bundle-visualizer",
+    "build": "METEOR_PACKAGE_DIRS=/Users/david/sites/dobryvodic/packages meteor build ./ --directory --architecture os.linux.x86_64",
+    "server:build": "METEOR_PACKAGE_DIRS=/var/www/dobryvodic2/packages meteor build ./ --directory"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.13.10",
+    "@emotion/react": "11.1.5",
+    "@emotion/styled": "11.1.5",
+    "@fortawesome/fontawesome-svg-core": "1.2.35",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
+    "@fortawesome/react-fontawesome": "0.1.14",
+    "@styled-system/css": "5.1.5",
+    "@styled-system/should-forward-prop": "5.1.5",
+    "dayjs": "^1.10.4",
+    "formik": "2.2.6",
+    "meteor-node-stubs": "1.0.3",
+    "moment": "^2.29.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-modal": "^3.13.1",
+    "react-router-dom": "5.2.0",
+    "react-select": "^4.3.0",
+    "styled-system": "5.1.5",
+    "sweetalert2": "^10.16.6",
+    "yup": "^0.32.9"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
